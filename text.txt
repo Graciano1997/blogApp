@@ -1,0 +1,31 @@
+rails generate migration CreateUsers name:string part_number:string
+rails generate migration CreateUsers name:string photo:text bio:text posts_counter:integer
+rails generate migration CreateComments text:text
+
+rails generate migration AddUserRefToComments user:references:index
+rails generate migration AddUserRefToLikes user:references:index
+
+rails generate migration AddPostRefToLikes post:references:index
+rails generate migration AddPostRefToComments post:references:index
+
+generate migration AddAuthorRefToPosts author:references{to_table: :users}
+
+rails generate migration CreateLikes
+
+rails generate migration CreatePosts title:string text:text comments_counter:integer likes_counter:integer
+
+
+rails generate migration AddAuthorRefToPosts author:references{to_table: :users}
+
+
+rails generate migration AddAuthorToPosts author:integer:index
+
+title
+text
+comments_counter
+likes_counter
+
+name
+photo
+bio
+posts_counter
